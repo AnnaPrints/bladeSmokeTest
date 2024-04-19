@@ -86,7 +86,6 @@ public class BladeTest extends BaseTestCase {
         String[] args = null;
         Blade start = Blade.create().start(Hello.class, args);
         start.stop();
-
     }
 
     @Test
@@ -96,7 +95,12 @@ public class BladeTest extends BaseTestCase {
         assertEquals(anyString, blade.environment().getOrNull(ENV_KEY_APP_NAME));
     }
 
-
+    @Test
+    public void testStartedEvent() {
+        Blade blade = Blade.create();
+        EventListener listener = e1 -> System.out.println("Server started.");
+        blade.event(EventType.SERVER_STARTED, listener);
+    }
 
     @Test
     public void testTemplate() {
@@ -113,7 +117,7 @@ public class BladeTest extends BaseTestCase {
         blade.register(object);
         assertEquals(object, blade.ioc().getBean(BladeClassDefineType.class));
     }
-//
+
     @Test
     public void testAddStatics() {
         Blade blade = Blade.create();
