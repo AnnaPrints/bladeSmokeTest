@@ -17,6 +17,7 @@ import static org.mockito.Mockito.when;
  *
  * @author biezhi
  * 2017/6/3
+ *
  */
 @Slf4j
 public class BaseTestCase {
