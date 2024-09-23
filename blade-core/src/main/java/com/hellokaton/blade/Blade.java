@@ -54,7 +54,7 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static com.hellokaton.blade.mvc.BladeConst.ENV_KEY_FAVICON_DIR;
-
+///
 /**
  * Blade Core
  * <p>
