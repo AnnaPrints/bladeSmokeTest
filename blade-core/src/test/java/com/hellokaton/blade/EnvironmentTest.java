@@ -62,7 +62,8 @@ public class EnvironmentTest {
     public void testEnvByUrl() {
         URL url = EnvironmentTest.class.getResource("/application.properties");
         Environment environment = Environment.of(url);
-        assertEquals("0.0.2", Objects.requireNonNull(environment).getOrNull("app.version"));
+        assertEquals("0.0.2", Objects.requireNonNull(environment)
+                .getOrNull("app.version"));
     }
 
     @Test

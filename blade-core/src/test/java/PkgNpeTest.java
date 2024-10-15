@@ -9,7 +9,5 @@ public class PkgNpeTest {
     public static void main(String[] args) {
         Blade.create()
                 .start();
-
-
     }
 }
