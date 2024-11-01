@@ -21,3 +21,4 @@ public class Example4 {
         example.useDeprecatedApi();
     }
 }
+//example.useDeprecatedApi();
